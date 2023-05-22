@@ -100,7 +100,7 @@ class HomeViewController: UIViewController {
                     if let quantity = statistics.sumQuantity() {
 
                         let distanceValue = quantity.doubleValue(for: HKUnit.meter())
-                        let kiloDistance = distanceValue/100
+                        let kiloDistance = distanceValue/1000
                         let distanceFloor = floor(kiloDistance*100)/100
                         distanceArray.append(Float(distanceFloor))
                         
