@@ -56,7 +56,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="countLabel" destination="jqH-i7-ouv" id="Coo-lA-s4m"/>
+                        <outlet property="distanceLabel" destination="HQi-9z-02U" id="5yI-j0-Sck"/>
+                        <outlet property="stepLabel" destination="jqH-i7-ouv" id="mld-XT-0sy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
