@@ -13,6 +13,8 @@
 		64982EA82A18B09200223799 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64982EA72A18B09200223799 /* Assets.xcassets */; };
 		64982EAB2A18B09200223799 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64982EA92A18B09200223799 /* LaunchScreen.storyboard */; };
 		64982EB32A18B5EA00223799 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64982EB22A18B5EA00223799 /* HomeViewController.swift */; };
+		64982EC22A1CE88F00223799 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64982EC12A1CE88F00223799 /* TableViewController.swift */; };
+		64982EC42A1CE9DC00223799 /* MemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64982EC32A1CE9DC00223799 /* MemoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		64982EAC2A18B09200223799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64982EB22A18B5EA00223799 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		64982EB42A18C0BA00223799 /* Steps.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Steps.entitlements; sourceTree = "<group>"; };
+		64982EC12A1CE88F00223799 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		64982EC32A1CE9DC00223799 /* MemoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,8 @@
 				64982EA92A18B09200223799 /* LaunchScreen.storyboard */,
 				64982EAC2A18B09200223799 /* Info.plist */,
 				64982EB22A18B5EA00223799 /* HomeViewController.swift */,
+				64982EC12A1CE88F00223799 /* TableViewController.swift */,
+				64982EC32A1CE9DC00223799 /* MemoryViewController.swift */,
 			);
 			path = Steps;
 			sourceTree = "<group>";
@@ -143,6 +149,8 @@
 				64982E9F2A18B09000223799 /* AppDelegate.swift in Sources */,
 				64982EA12A18B09000223799 /* SceneDelegate.swift in Sources */,
 				64982EB32A18B5EA00223799 /* HomeViewController.swift in Sources */,
+				64982EC22A1CE88F00223799 /* TableViewController.swift in Sources */,
+				64982EC42A1CE9DC00223799 /* MemoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
