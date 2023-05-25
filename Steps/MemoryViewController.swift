@@ -8,11 +8,13 @@
 import UIKit
 import RealmSwift
 
-class MemoryViewController: UIViewController {
+class MemoryViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet var stepLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var distanceLabel: UILabel!
+    
+    @IBOutlet var photoImageView: UIImageView!
     
     let realm = try! Realm()
     var selectedMemory: Memory!
@@ -20,22 +22,39 @@ class MemoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        stepLabel.text = selectedMemory.date
-        dateLabel.text = "\(selectedMemory.steps_num)"
+        dateLabel.text = selectedMemory.date
+        stepLabel.text = "\(selectedMemory.steps_num)"
         distanceLabel.text = "\(selectedMemory.distance)"
-
-        // Do any additional setup after loading the view.
+        photoImageView.image = UIImage(data: selectedMemory.photo)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func onTappedCameraButton(){
+        presentPickerController(sourceType: .camera)
     }
-    */
+    
+    func presentPickerController(sourceType: UIImagePickerController.SourceType){
+        if UIImagePickerController.isSourceTypeAvailable(sourceType){
+            let picker = UIImagePickerController()
+            picker.sourceType = sourceType
+            picker.delegate = self
+            self.present(picker, animated: true, completion: nil)
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        self.dismiss(animated: true, completion: nil)
+        
+        let image = info[.originalImage] as! UIImage
+        photoImageView.image = image
+        print(type(of: image))
+        guard let data = image.jpegData(compressionQuality: 0.2) else {
+            return
+        }
+        try! realm.write {
+            selectedMemory!.photo = data
+        }
+        
+    }
+    
 
 }

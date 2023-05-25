@@ -324,6 +324,7 @@
 				DEVELOPMENT_TEAM = MQ38WHYXCG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Steps/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "アプリ内で写真を撮るためにカメラを起動する";
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "アプリが臨床記録の読み取り許可";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "読み込み許可を求めるメッセージ";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "書き込み許可を求めるメッセージ";
@@ -356,6 +357,7 @@
 				DEVELOPMENT_TEAM = MQ38WHYXCG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Steps/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "アプリ内で写真を撮るためにカメラを起動する";
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "アプリが臨床記録の読み取り許可";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "読み込み許可を求めるメッセージ";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "書き込み許可を求めるメッセージ";

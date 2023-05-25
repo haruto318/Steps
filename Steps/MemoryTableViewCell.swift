@@ -11,7 +11,7 @@ class MemoryTableViewCell: UITableViewCell {
     
     @IBOutlet var stepLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
-//    @IBOutlet var photo: UIImageView!
+    @IBOutlet var photoImageView: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,9 +24,10 @@ class MemoryTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setCell(step: Int, date: String, photoUrl: String){
+    func setCell(step: Int, date: String, photoUrl: Data){
         stepLabel.text = "\(step)"
         dateLabel.text = "\(date)"
+        photoImageView.image = UIImage(data: photoUrl)
         
 //        let url = URL(string: photoUrl)
 //        do {

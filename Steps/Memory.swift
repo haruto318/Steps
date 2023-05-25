@@ -13,5 +13,5 @@ class Memory: Object{
     @Persisted var steps_num: Int = 0
     @Persisted var distance: Float = 0.0
     @Persisted var location: String = ""
-    @Persisted var photo: String = ""
+    @Persisted var photo: Data
 }

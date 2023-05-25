@@ -93,7 +93,7 @@ class HomeViewController: UIViewController {
                     self.dateArray.append(graphFormatter.string(from: item.startDate))
                     self.stepArray.append(Int(item.sumQuantity()?.doubleValue(for: .count()) ?? 0))
                     
-                    //                    print("\(dateFormatter.string(from: item.startDate)) - \(dateFormatter.string(from: item.endDate))\(item.sumQuantity()?.doubleValue(for: .count()) ?? 0.0)")
+                                        print("\(dateFormatter.string(from: item.startDate)) - \(dateFormatter.string(from: item.endDate))\(item.sumQuantity()?.doubleValue(for: .count()) ?? 0.0)")
                 }
                 print(dateArray)
                 print(stepArray)
