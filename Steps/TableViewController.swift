@@ -20,6 +20,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         super.viewDidLoad()
         
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.register(UINib(nibName: "MemoryTableViewCell", bundle: nil), forCellReuseIdentifier: "MemoryCell")
         memories = readMemories()
     }
@@ -39,10 +40,18 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedMemory = memories[indexPath.row]
         self.performSegue(withIdentifier: "toMemoryView", sender: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func readMemories() -> [Memory]{
         return Array(realm.objects(Memory.self))
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toMemoryView" {
+            let MemoryViewController = segue.destination as! MemoryViewController
+            MemoryViewController.selectedMemory = self.selectedMemory!
+        }
     }
 
 }

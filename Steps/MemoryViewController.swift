@@ -6,11 +6,23 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MemoryViewController: UIViewController {
+    
+    @IBOutlet var stepLabel: UILabel!
+    @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var distanceLabel: UILabel!
+    
+    let realm = try! Realm()
+    var selectedMemory: Memory!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        stepLabel.text = selectedMemory.date
+        dateLabel.text = "\(selectedMemory.steps_num)"
+        distanceLabel.text = "\(selectedMemory.distance)"
 
         // Do any additional setup after loading the view.
     }

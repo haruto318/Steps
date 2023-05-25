@@ -11,7 +11,7 @@ class MemoryTableViewCell: UITableViewCell {
     
     @IBOutlet var stepLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
-    @IBOutlet var photo: UIImageView!
+//    @IBOutlet var photo: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,14 +28,14 @@ class MemoryTableViewCell: UITableViewCell {
         stepLabel.text = "\(step)"
         dateLabel.text = "\(date)"
         
-        let url = URL(string: photoUrl)
-        do {
-            let data = try Data(contentsOf: url!)
-            let image = UIImage(data: data)
-            photo.image = image
-        } catch let err {
-            print("Error: \(err.localizedDescription)")
-        }
+//        let url = URL(string: photoUrl)
+//        do {
+//            let data = try Data(contentsOf: url!)
+//            let image = UIImage(data: data)
+//            photo.image = image
+//        } catch let err {
+//            print("Error: \(err.localizedDescription)")
+//        }
     }
     
 }
