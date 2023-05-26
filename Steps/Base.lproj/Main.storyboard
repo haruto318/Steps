@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -45,9 +46,9 @@
                                 <color key="highlightedColor" systemColor="opaqueSeparatorColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Steps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o34-Fs-YT1">
-                                <rect key="frame" x="90" y="59" width="212" height="87"/>
+                                <rect key="frame" x="90" y="73" width="212" height="87"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="39"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="49"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -63,7 +64,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="544.27480916030527" y="21.83098591549296"/>
+            <point key="canvasLocation" x="589" y="22"/>
         </scene>
         <!--思い出-->
         <scene sceneID="jd7-at-nbn">
@@ -155,7 +156,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="dcI-6f-EgS">
                         <barButtonItem key="rightBarButtonItem" title="写真" style="plain" id="EPX-Q0-qbq">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="wKF-bZ-wS8">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="wKF-bZ-wS8">
                                 <rect key="frame" x="290" y="5" width="87" height="34.333333333333336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -176,6 +177,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w5N-bh-FPH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1435.8778625954199" y="783.80281690140851"/>
+        </scene>
+        <!--MAP-->
+        <scene sceneID="TgC-P2-w9b">
+            <objects>
+                <viewController id="Ndq-4H-kbK" customClass="MapViewController" customModule="Steps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g2i-GX-3Hc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ztH-T9-fhK">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="747"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="cx0-Sa-cTA" appends="YES" id="tg7-Fe-go5"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IGk-L4-jEF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="MAP" image="map" catalog="system" id="3lF-YV-8tJ"/>
+                    <connections>
+                        <outlet property="mapView" destination="ztH-T9-fhK" id="f1k-2g-mF7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="THH-t9-VT7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="cx0-Sa-cTA">
+                    <connections>
+                        <action selector="pressMap:" destination="Ndq-4H-kbK" id="sql-lV-gZT"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-1486.2595419847328" y="783.80281690140851"/>
         </scene>
         <!--思い出-->
         <scene sceneID="JeB-Lx-XKh">
@@ -208,6 +244,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="tIZ-4U-PsF"/>
+                        <segue destination="Ndq-4H-kbK" kind="relationship" relationship="viewControllers" id="E4f-6i-5rN"/>
                         <segue destination="faS-rS-1CZ" kind="relationship" relationship="viewControllers" id="tV3-oN-9e1"/>
                     </connections>
                 </tabBarController>
@@ -218,6 +255,7 @@
     </scenes>
     <resources>
         <image name="house" catalog="system" width="128" height="104"/>
+        <image name="map" catalog="system" width="128" height="112"/>
         <image name="shoeprints.fill" catalog="system" width="116" height="128"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

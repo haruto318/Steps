@@ -9,7 +9,7 @@ import UIKit
 import HealthKit
 import RealmSwift
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController{
     
     @IBOutlet var stepLabel: UILabel!
     @IBOutlet var distanceLabel: UILabel!
@@ -38,6 +38,7 @@ class HomeViewController: UIViewController {
                 return
             }
         }
+    
     }
     
     func getSteps(){
@@ -187,6 +188,5 @@ class HomeViewController: UIViewController {
     func read() -> Memory? {
         return realm.objects(Memory.self).last
     }
-    
 }
 
