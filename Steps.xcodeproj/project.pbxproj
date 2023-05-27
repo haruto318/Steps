@@ -21,6 +21,7 @@
 		64FFC43F2A1E41F400DF2BE3 /* MemoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64FFC43D2A1E41F400DF2BE3 /* MemoryTableViewCell.xib */; };
 		64FFC4412A1E619F00DF2BE3 /* MemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FFC4402A1E619F00DF2BE3 /* MemoryViewController.swift */; };
 		64FFC47B2A20FA3500DF2BE3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FFC47A2A20FA3500DF2BE3 /* MapViewController.swift */; };
+		64FFC48B2A2239AA00DF2BE3 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 64FFC48A2A2239AA00DF2BE3 /* Charts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64982ECE2A1E132A00223799 /* RealmSwift in Frameworks */,
+				64FFC48B2A2239AA00DF2BE3 /* Charts in Frameworks */,
 				64982ECC2A1E132A00223799 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,6 +112,7 @@
 			packageProductDependencies = (
 				64982ECB2A1E132A00223799 /* Realm */,
 				64982ECD2A1E132A00223799 /* RealmSwift */,
+				64FFC48A2A2239AA00DF2BE3 /* Charts */,
 			);
 			productName = Steps;
 			productReference = 64982E9B2A18B09000223799 /* Steps.app */;
@@ -141,6 +144,7 @@
 			mainGroup = 64982E922A18B08F00223799;
 			packageReferences = (
 				64982ECA2A1E132A00223799 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				64FFC4892A2239AA00DF2BE3 /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = 64982E9C2A18B09000223799 /* Products */;
 			projectDirPath = "";
@@ -419,6 +423,14 @@
 				minimumVersion = 10.39.1;
 			};
 		};
+		64FFC4892A2239AA00DF2BE3 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -431,6 +443,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 64982ECA2A1E132A00223799 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		64FFC48A2A2239AA00DF2BE3 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64FFC4892A2239AA00DF2BE3 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

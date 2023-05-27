@@ -28,6 +28,8 @@ class MemoryTableViewCell: UITableViewCell {
         stepLabel.text = "\(step)"
         dateLabel.text = "\(date)"
         photoImageView.image = UIImage(data: photoUrl)
+        photoImageView.layer.cornerRadius = 10
+        photoImageView.clipsToBounds = true
         
 //        let url = URL(string: photoUrl)
 //        do {
