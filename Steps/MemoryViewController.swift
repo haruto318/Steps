@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import CoreLocation
 
 extension UIImage {
        // image with rounded corners
@@ -28,17 +29,20 @@ extension UIImage {
        }
    }
 
-class MemoryViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class MemoryViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, CLLocationManagerDelegate {
     
     @IBOutlet var stepLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var distanceLabel: UILabel!
     @IBOutlet var containerView: UIView!
+    @IBOutlet var locationLabel: UILabel!
     
     @IBOutlet var photoImageView: UIImageView!
     
     let realm = try! Realm()
     var selectedMemory: Memory!
+    
+    var locationManager:CLLocationManager!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,12 +50,18 @@ class MemoryViewController: UIViewController, UINavigationControllerDelegate, UI
         dateLabel.text = selectedMemory.date
         stepLabel.text = "\(selectedMemory.steps_num)"
         distanceLabel.text = "\(selectedMemory.distance)"
+        locationLabel.text = selectedMemory.location
         photoImageView.image = UIImage(data: selectedMemory.photo)
         photoImageView.layer.cornerRadius = 20
         photoImageView.clipsToBounds = true
-        
         containerView.layer.cornerRadius = 20
         containerView.clipsToBounds = true
+        
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        
     }
     
     @IBAction func onTappedCameraButton(){
@@ -77,10 +87,52 @@ class MemoryViewController: UIViewController, UINavigationControllerDelegate, UI
             return
         }
         try! realm.write {
+            DispatchQueue.global().async {
+                if CLLocationManager.locationServicesEnabled(){
+                    self.locationManager.startUpdatingLocation()
+                }
+            }
             selectedMemory!.photo = data
+            DispatchQueue.global().async {
+                if CLLocationManager.locationServicesEnabled(){
+                    self.locationManager.stopUpdatingLocation()
+                }
+            }
         }
         
     }
     
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let userLocation :CLLocation = locations[0] as CLLocation
+
+        print("user latitude = \(userLocation.coordinate.latitude)")
+        print("user longitude = \(userLocation.coordinate.longitude)")
+
+//        self.labelLat.text = "\(userLocation.coordinate.latitude)"
+//        self.labelLongi.text = "\(userLocation.coordinate.longitude)"
+
+        let geocoder = CLGeocoder()
+        geocoder.reverseGeocodeLocation(userLocation) { (placemarks, error) in
+            if (error != nil){
+                print("error in reverseGeocode")
+            }
+            let placemark = placemarks! as [CLPlacemark]
+            if placemark.count>0{
+                let placemark = placemarks![0]
+                print(placemark.locality!)
+                print(placemark.administrativeArea!)
+                print(placemark.country!)
+                
+                try! self.realm.write {
+                    self.selectedMemory!.location = placemark.administrativeArea! + " " + placemark.locality!
+                }
+            }
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Error \(error)")
+    }
 
 }
