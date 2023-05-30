@@ -36,7 +36,6 @@ class MemoryViewController: UIViewController, UINavigationControllerDelegate, UI
     @IBOutlet var distanceLabel: UILabel!
     @IBOutlet var containerView: UIView!
     @IBOutlet var locationLabel: UILabel!
-    
     @IBOutlet var photoImageView: UIImageView!
     
     let realm = try! Realm()
@@ -51,9 +50,12 @@ class MemoryViewController: UIViewController, UINavigationControllerDelegate, UI
         stepLabel.text = "\(selectedMemory.steps_num)"
         distanceLabel.text = "\(selectedMemory.distance)"
         locationLabel.text = selectedMemory.location
+        
         photoImageView.image = UIImage(data: selectedMemory.photo)
         photoImageView.layer.cornerRadius = 20
         photoImageView.clipsToBounds = true
+        imageGradient()
+        
         containerView.layer.cornerRadius = 20
         containerView.clipsToBounds = true
         
@@ -62,6 +64,15 @@ class MemoryViewController: UIViewController, UINavigationControllerDelegate, UI
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
         
+    }
+    
+    func imageGradient(){
+        let gradient = CAGradientLayer()
+        gradient.frame = photoImageView.bounds
+        let startColor = UIColor.systemBackground.withAlphaComponent(0).cgColor
+        let endColor = UIColor.systemBackground.cgColor
+        gradient.colors = [startColor, endColor]
+        photoImageView.layer.insertSublayer(gradient, at: 0)
     }
     
     @IBAction func onTappedCameraButton(){

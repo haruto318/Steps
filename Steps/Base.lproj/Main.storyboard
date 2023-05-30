@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9rc-PO-G34">
-    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Map view configurations" minToolsVersion="14.0"/>
@@ -8,17 +8,23 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansJP-VariableFont_wght.ttf">
+            <string>NotoSansJP-Thin_Bold</string>
+            <string>NotoSansJP-Thin_ExtraBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--HOME-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Steps" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o34-Fs-YT1">
-                                <rect key="frame" x="90" y="77" width="248" height="49.333333333333343"/>
+                                <rect key="frame" x="90" y="78" width="234" height="49.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49.329999999999998" id="4dq-h0-iuV"/>
                                 </constraints>
@@ -27,10 +33,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eVC-6f-lE4">
-                                <rect key="frame" x="20" y="166.33333333333334" width="388" height="342.33333333333326"/>
+                                <rect key="frame" x="20" y="167.5" width="374" height="329.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9LJ-Qe-5C4" customClass="LineChartView" customModule="Charts">
-                                        <rect key="frame" x="15" y="25" width="358" height="292.33333333333331"/>
+                                        <rect key="frame" x="15" y="25" width="344" height="279.5"/>
                                         <color key="backgroundColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
@@ -44,7 +50,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmU-tC-kl4">
-                                <rect key="frame" x="20" y="571.66666666666663" width="388" height="145"/>
+                                <rect key="frame" x="20" y="560" width="374" height="145"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqH-i7-ouv">
                                         <rect key="frame" x="15" y="90" width="131" height="35"/>
@@ -57,22 +63,22 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7j-iK-WsQ">
-                                        <rect key="frame" x="304" y="102" width="25" height="23"/>
+                                        <rect key="frame" x="305" y="102" width="24" height="23"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="23" id="EF4-sX-BIZ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="NotoSansJP-Thin_ExtraBold" family="Noto Sans JP Thin" pointSize="15"/>
                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                         <color key="highlightedColor" systemColor="opaqueSeparatorColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="距離" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDx-65-OZf">
-                                        <rect key="frame" x="281" y="55" width="32" height="25"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="16"/>
+                                        <rect key="frame" x="267" y="55" width="32" height="25"/>
+                                        <fontDescription key="fontDescription" name="NotoSansJP-Thin_ExtraBold" family="Noto Sans JP Thin" pointSize="16"/>
                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                         <color key="highlightedColor" systemColor="opaqueSeparatorColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQi-9z-02U">
-                                        <rect key="frame" x="192" y="90" width="107" height="35"/>
+                                        <rect key="frame" x="193" y="90" width="107" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="107" id="O4T-kW-NN5"/>
                                         </constraints>
@@ -82,22 +88,22 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="歩数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7u-eK-NDh">
                                         <rect key="frame" x="74" y="55" width="32" height="25"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="NotoSansJP-Thin_ExtraBold" family="Noto Sans JP Thin" pointSize="16"/>
                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                         <color key="highlightedColor" systemColor="opaqueSeparatorColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日の記録" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhs-dM-NR2">
-                                        <rect key="frame" x="15" y="15" width="90" height="18"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="18"/>
+                                        <rect key="frame" x="15" y="15" width="90" height="26"/>
+                                        <fontDescription key="fontDescription" name="NotoSansJP-Thin_Bold" family="Noto Sans JP Thin" pointSize="18"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="highlightedColor" systemColor="opaqueSeparatorColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="歩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssY-zi-5ua">
-                                        <rect key="frame" x="151" y="102" width="14" height="23"/>
+                                        <rect key="frame" x="151" y="102" width="15" height="23"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="23" id="Eev-3M-RFZ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="NotoSansJP-Thin_ExtraBold" family="Noto Sans JP Thin" pointSize="15"/>
                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                         <color key="highlightedColor" systemColor="opaqueSeparatorColor"/>
                                     </label>
@@ -167,18 +173,18 @@
             <objects>
                 <viewController id="6on-uh-D5x" customClass="TableViewController" customModule="Steps" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hs2-W2-OJh">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dLY-an-URq">
-                                <rect key="frame" x="0.0" y="91" width="428" height="744"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="712"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MemoryCell" id="yYR-6o-xah">
-                                        <rect key="frame" x="0.0" y="50" width="428" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yYR-6o-xah" id="5YC-9a-OBr">
-                                            <rect key="frame" x="0.0" y="0.0" width="397.66666666666669" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383.5" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -209,20 +215,20 @@
             <objects>
                 <viewController id="YEu-C6-ug1" customClass="MemoryViewController" customModule="Steps" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Iw-Xw-08F">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="11B-Rq-wiQ">
-                                <rect key="frame" x="20" y="121" width="388" height="388"/>
+                                <rect key="frame" x="20" y="122" width="374" height="374"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="11B-Rq-wiQ" secondAttribute="height" multiplier="1:1" id="NgS-mc-Fcg"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvm-5n-ZHd">
-                                <rect key="frame" x="20" y="636" width="388" height="145"/>
+                                <rect key="frame" x="20" y="619.5" width="374" height="143.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wu-fc-97I">
-                                        <rect key="frame" x="15" y="90" width="131" height="35"/>
+                                        <rect key="frame" x="15" y="88.5" width="131" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="131" id="EXV-UW-d0s"/>
                                             <constraint firstAttribute="height" constant="35" id="jzu-KB-mbu"/>
@@ -232,22 +238,22 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jK3-FH-V5j">
-                                        <rect key="frame" x="304" y="102" width="25" height="23"/>
+                                        <rect key="frame" x="305" y="100.5" width="24" height="23"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="23" id="H3C-Q2-CV2"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="NotoSansJP-Thin_ExtraBold" family="Noto Sans JP Thin" pointSize="15"/>
                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                         <color key="highlightedColor" systemColor="opaqueSeparatorColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="距離" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGL-cQ-fAj">
-                                        <rect key="frame" x="281" y="55" width="32" height="25"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="16"/>
+                                        <rect key="frame" x="267" y="55" width="32" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="NotoSansJP-Thin_ExtraBold" family="Noto Sans JP Thin" pointSize="16"/>
                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                         <color key="highlightedColor" systemColor="opaqueSeparatorColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdD-j1-f9E">
-                                        <rect key="frame" x="192" y="90" width="107" height="35"/>
+                                        <rect key="frame" x="193" y="88.5" width="107" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="107" id="n6c-xw-MBb"/>
                                         </constraints>
@@ -256,23 +262,23 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="歩数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjL-Lu-ml6">
-                                        <rect key="frame" x="74" y="55" width="32" height="25"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="16"/>
+                                        <rect key="frame" x="74" y="55" width="32" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="NotoSansJP-Thin_ExtraBold" family="Noto Sans JP Thin" pointSize="16"/>
                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                         <color key="highlightedColor" systemColor="opaqueSeparatorColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="記録" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XpT-ym-JHM">
-                                        <rect key="frame" x="15" y="15" width="36" height="18"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="18"/>
+                                        <rect key="frame" x="15" y="15" width="36" height="26.5"/>
+                                        <fontDescription key="fontDescription" name="NotoSansJP-Thin_ExtraBold" family="Noto Sans JP Thin" pointSize="18"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="highlightedColor" systemColor="opaqueSeparatorColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="歩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALT-dv-jKz">
-                                        <rect key="frame" x="151" y="102" width="14" height="23"/>
+                                        <rect key="frame" x="151" y="100.5" width="15" height="23"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="23" id="EcW-2v-GlL"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="NotoSansJP-Thin_ExtraBold" family="Noto Sans JP Thin" pointSize="15"/>
                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                         <color key="highlightedColor" systemColor="opaqueSeparatorColor"/>
                                     </label>
@@ -284,7 +290,6 @@
                                     <constraint firstItem="fjL-Lu-ml6" firstAttribute="leading" secondItem="nvm-5n-ZHd" secondAttribute="leading" constant="74" id="1l7-DA-HjH"/>
                                     <constraint firstItem="ALT-dv-jKz" firstAttribute="bottom" secondItem="3wu-fc-97I" secondAttribute="bottom" id="3A1-D2-xT2"/>
                                     <constraint firstItem="jK3-FH-V5j" firstAttribute="leading" secondItem="CdD-j1-f9E" secondAttribute="trailing" constant="5" id="74W-T0-QTk"/>
-                                    <constraint firstAttribute="height" constant="145" id="8Bm-rj-84E"/>
                                     <constraint firstItem="ALT-dv-jKz" firstAttribute="leading" secondItem="3wu-fc-97I" secondAttribute="trailing" constant="5" id="G3X-RH-Pur"/>
                                     <constraint firstItem="CdD-j1-f9E" firstAttribute="top" secondItem="3wu-fc-97I" secondAttribute="top" id="HmQ-9G-xKp"/>
                                     <constraint firstItem="XpT-ym-JHM" firstAttribute="top" secondItem="nvm-5n-ZHd" secondAttribute="top" constant="15" id="IQb-t1-KUN"/>
@@ -309,43 +314,45 @@
                                     <constraint firstItem="XpT-ym-JHM" firstAttribute="leading" secondItem="nvm-5n-ZHd" secondAttribute="leading" constant="15" id="zBn-tP-MZe"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Jm-mb-faZ">
-                                <rect key="frame" x="20" y="517" width="376" height="27"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="27"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="緑地" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Jm-mb-faZ">
+                                <rect key="frame" x="20" y="498" width="362" height="39.5"/>
+                                <fontDescription key="fontDescription" name="NotoSansJP-Thin_Bold" family="Noto Sans JP Thin" pointSize="27"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6o-v9-8Xi">
-                                <rect key="frame" x="20" y="552" width="376" height="22"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="22"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2/3/4/" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6o-v9-8Xi">
+                                <rect key="frame" x="20" y="538.5" width="362" height="32"/>
+                                <fontDescription key="fontDescription" name="NotoSansJP-Thin_ExtraBold" family="Noto Sans JP Thin" pointSize="22"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VBi-A0-I0E"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="VBi-A0-I0E" firstAttribute="bottom" secondItem="nvm-5n-ZHd" secondAttribute="bottom" constant="50" id="06b-Xn-ZsH"/>
                             <constraint firstItem="nvm-5n-ZHd" firstAttribute="leading" secondItem="11B-Rq-wiQ" secondAttribute="leading" id="4Gi-u4-Jbb"/>
                             <constraint firstItem="D6o-v9-8Xi" firstAttribute="leading" secondItem="1Jm-mb-faZ" secondAttribute="leading" id="57B-im-At0"/>
                             <constraint firstItem="11B-Rq-wiQ" firstAttribute="leading" secondItem="D6o-v9-8Xi" secondAttribute="leading" id="5Bv-jS-p9Y"/>
+                            <constraint firstItem="nvm-5n-ZHd" firstAttribute="top" relation="lessThanOrEqual" secondItem="D6o-v9-8Xi" secondAttribute="bottom" constant="70" id="82Q-5e-kcc"/>
                             <constraint firstItem="D6o-v9-8Xi" firstAttribute="trailing" secondItem="1Jm-mb-faZ" secondAttribute="trailing" id="8C6-oG-zmf"/>
-                            <constraint firstItem="D6o-v9-8Xi" firstAttribute="top" secondItem="1Jm-mb-faZ" secondAttribute="bottom" constant="8" id="HnN-nF-amo"/>
-                            <constraint firstItem="1Jm-mb-faZ" firstAttribute="top" secondItem="11B-Rq-wiQ" secondAttribute="bottom" constant="8" id="Ql3-2s-lkS"/>
                             <constraint firstItem="11B-Rq-wiQ" firstAttribute="leading" secondItem="VBi-A0-I0E" secondAttribute="leading" constant="20" id="Rca-5W-GJG"/>
+                            <constraint firstItem="D6o-v9-8Xi" firstAttribute="top" secondItem="1Jm-mb-faZ" secondAttribute="bottom" constant="1" id="ZRI-Qg-Ns7"/>
+                            <constraint firstItem="nvm-5n-ZHd" firstAttribute="trailing" secondItem="11B-Rq-wiQ" secondAttribute="trailing" id="ZaQ-ES-m2Y"/>
                             <constraint firstItem="nvm-5n-ZHd" firstAttribute="trailing" secondItem="11B-Rq-wiQ" secondAttribute="trailing" id="Zo1-rA-wx5"/>
                             <constraint firstItem="11B-Rq-wiQ" firstAttribute="centerX" secondItem="7Iw-Xw-08F" secondAttribute="centerX" id="fJp-ZA-rXd"/>
                             <constraint firstItem="11B-Rq-wiQ" firstAttribute="top" secondItem="VBi-A0-I0E" secondAttribute="top" constant="30" id="gys-h9-Ibg"/>
+                            <constraint firstItem="1Jm-mb-faZ" firstAttribute="top" secondItem="11B-Rq-wiQ" secondAttribute="bottom" constant="2" id="ibU-Kf-gA5"/>
                             <constraint firstItem="11B-Rq-wiQ" firstAttribute="centerX" secondItem="7Iw-Xw-08F" secondAttribute="centerX" id="kq1-ls-Zea"/>
                             <constraint firstItem="VBi-A0-I0E" firstAttribute="trailing" secondItem="D6o-v9-8Xi" secondAttribute="trailing" constant="32" id="v70-df-X7G"/>
                             <constraint firstItem="nvm-5n-ZHd" firstAttribute="centerX" secondItem="7Iw-Xw-08F" secondAttribute="centerX" id="vD0-1I-y9F"/>
-                            <constraint firstItem="VBi-A0-I0E" firstAttribute="bottom" secondItem="nvm-5n-ZHd" secondAttribute="bottom" constant="62" id="wS5-Wc-Gnb"/>
                             <constraint firstItem="VBi-A0-I0E" firstAttribute="trailing" secondItem="11B-Rq-wiQ" secondAttribute="trailing" constant="20" id="zfH-Tu-jt5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dcI-6f-EgS">
                         <barButtonItem key="rightBarButtonItem" title="写真" style="plain" id="EPX-Q0-qbq">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="wKF-bZ-wS8">
-                                <rect key="frame" x="321" y="4.6666666666666679" width="87" height="34.666666666666657"/>
+                                <rect key="frame" x="307" y="4.5" width="87" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="写真"/>
@@ -366,18 +373,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w5N-bh-FPH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1435.8778625954199" y="783.80281690140851"/>
+            <point key="canvasLocation" x="1435.5140186915887" y="783.36933045356375"/>
         </scene>
         <!--MAP-->
         <scene sceneID="TgC-P2-w9b">
             <objects>
                 <viewController id="Ndq-4H-kbK" customClass="MapViewController" customModule="Steps" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g2i-GX-3Hc">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ztH-T9-fhK">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="843"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <gestureRecognizers/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                                 <connections>
@@ -415,7 +422,7 @@
                     <tabBarItem key="tabBarItem" title="思い出" image="shoeprints.fill" catalog="system" id="JLT-Tc-HZT"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PNE-ez-SVU">
-                        <rect key="frame" x="0.0" y="47" width="428" height="44"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

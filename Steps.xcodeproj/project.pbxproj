@@ -22,6 +22,7 @@
 		64FFC4412A1E619F00DF2BE3 /* MemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FFC4402A1E619F00DF2BE3 /* MemoryViewController.swift */; };
 		64FFC47B2A20FA3500DF2BE3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FFC47A2A20FA3500DF2BE3 /* MapViewController.swift */; };
 		64FFC48B2A2239AA00DF2BE3 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 64FFC48A2A2239AA00DF2BE3 /* Charts */; };
+		64FFC48E2A25CEDE00DF2BE3 /* NotoSansJP-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64FFC48D2A25CEDE00DF2BE3 /* NotoSansJP-VariableFont_wght.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		64FFC43D2A1E41F400DF2BE3 /* MemoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemoryTableViewCell.xib; sourceTree = "<group>"; };
 		64FFC4402A1E619F00DF2BE3 /* MemoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryViewController.swift; sourceTree = "<group>"; };
 		64FFC47A2A20FA3500DF2BE3 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		64FFC48D2A25CEDE00DF2BE3 /* NotoSansJP-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansJP-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		64982E9D2A18B09000223799 /* Steps */ = {
 			isa = PBXGroup;
 			children = (
+				64FFC48C2A25CEB600DF2BE3 /* font */,
 				64982EB42A18C0BA00223799 /* Steps.entitlements */,
 				64982E9E2A18B09000223799 /* AppDelegate.swift */,
 				64982EA02A18B09000223799 /* SceneDelegate.swift */,
@@ -91,6 +94,14 @@
 				64FFC47A2A20FA3500DF2BE3 /* MapViewController.swift */,
 			);
 			path = Steps;
+			sourceTree = "<group>";
+		};
+		64FFC48C2A25CEB600DF2BE3 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				64FFC48D2A25CEDE00DF2BE3 /* NotoSansJP-VariableFont_wght.ttf */,
+			);
+			path = font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64FFC43F2A1E41F400DF2BE3 /* MemoryTableViewCell.xib in Resources */,
+				64FFC48E2A25CEDE00DF2BE3 /* NotoSansJP-VariableFont_wght.ttf in Resources */,
 				64982EAB2A18B09200223799 /* LaunchScreen.storyboard in Resources */,
 				64982EA82A18B09200223799 /* Assets.xcassets in Resources */,
 				64982EA62A18B09000223799 /* Main.storyboard in Resources */,
