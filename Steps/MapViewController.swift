@@ -35,7 +35,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
 
             let annotation = MKPointAnnotation()
             annotation.coordinate = coordinate
-            annotation.title = "目的地候補"
+            annotation.title = "目的地"
             annotation.subtitle = "タップで経路を表示"
             mapView.addAnnotation(annotation)
         }

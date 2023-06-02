@@ -9,6 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Inter-VariableFont_slnt,wght.ttf">
+            <string>Inter-Regular_Black</string>
+            <string>Inter-Regular_Bold</string>
+        </array>
         <array key="NotoSansJP-VariableFont_wght.ttf">
             <string>NotoSansJP-Thin_Bold</string>
             <string>NotoSansJP-Thin_ExtraBold</string>
@@ -23,20 +27,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o34-Fs-YT1">
-                                <rect key="frame" x="90" y="78" width="234" height="49.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49.329999999999998" id="4dq-h0-iuV"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="49"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eVC-6f-lE4">
-                                <rect key="frame" x="20" y="167.5" width="374" height="329.5"/>
+                                <rect key="frame" x="20" y="170" width="374" height="330"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9LJ-Qe-5C4" customClass="LineChartView" customModule="Charts">
-                                        <rect key="frame" x="15" y="25" width="344" height="279.5"/>
+                                        <rect key="frame" x="15" y="25" width="344" height="280"/>
                                         <color key="backgroundColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
@@ -50,7 +45,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmU-tC-kl4">
-                                <rect key="frame" x="20" y="560" width="374" height="145"/>
+                                <rect key="frame" x="20" y="563" width="374" height="145"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqH-i7-ouv">
                                         <rect key="frame" x="15" y="90" width="131" height="35"/>
@@ -58,7 +53,7 @@
                                             <constraint firstAttribute="width" constant="131" id="TAM-J1-u8V"/>
                                             <constraint firstAttribute="height" constant="35" id="boX-cf-M6u"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="35"/>
+                                        <fontDescription key="fontDescription" name="Inter-Regular_Bold" family="Inter" pointSize="35"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -82,7 +77,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="107" id="O4T-kW-NN5"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="35"/>
+                                        <fontDescription key="fontDescription" name="Inter-Regular_Bold" family="Inter" pointSize="35"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -93,7 +88,7 @@
                                         <color key="highlightedColor" systemColor="opaqueSeparatorColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日の記録" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhs-dM-NR2">
-                                        <rect key="frame" x="15" y="15" width="90" height="26"/>
+                                        <rect key="frame" x="15" y="15" width="90" height="26.5"/>
                                         <fontDescription key="fontDescription" name="NotoSansJP-Thin_Bold" family="Noto Sans JP Thin" pointSize="18"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="highlightedColor" systemColor="opaqueSeparatorColor"/>
@@ -140,6 +135,12 @@
                                     <constraint firstItem="HQi-9z-02U" firstAttribute="top" secondItem="jqH-i7-ouv" secondAttribute="top" id="vR6-dz-P9l"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o34-Fs-YT1">
+                                <rect key="frame" x="90" y="63" width="234" height="67"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular_Black" family="Inter" pointSize="55"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -147,10 +148,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o34-Fs-YT1" secondAttribute="trailing" constant="90" id="6IK-38-Ucu"/>
                             <constraint firstItem="eVC-6f-lE4" firstAttribute="top" secondItem="o34-Fs-YT1" secondAttribute="bottom" constant="40" id="MeQ-1w-Qtc"/>
                             <constraint firstItem="o34-Fs-YT1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="UpO-1T-tg9"/>
-                            <constraint firstItem="o34-Fs-YT1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="WR3-3w-d5B"/>
                             <constraint firstItem="lmU-tC-kl4" firstAttribute="leading" secondItem="eVC-6f-lE4" secondAttribute="leading" id="XWA-ja-d46"/>
                             <constraint firstItem="lmU-tC-kl4" firstAttribute="trailing" secondItem="eVC-6f-lE4" secondAttribute="trailing" id="Yqh-v3-3na"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eVC-6f-lE4" secondAttribute="trailing" constant="20" id="aJg-iT-KIt"/>
+                            <constraint firstItem="o34-Fs-YT1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="dcD-Ao-9oB"/>
                             <constraint firstItem="lmU-tC-kl4" firstAttribute="top" secondItem="eVC-6f-lE4" secondAttribute="bottom" constant="63" id="pj5-3v-FMe"/>
                             <constraint firstItem="eVC-6f-lE4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="scU-hW-Viq"/>
                         </constraints>
@@ -166,7 +167,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="588.54961832061065" y="21.83098591549296"/>
+            <point key="canvasLocation" x="588.40579710144937" y="21.428571428571427"/>
         </scene>
         <!--思い出-->
         <scene sceneID="jd7-at-nbn">
@@ -208,7 +209,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="653-Xi-jVJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="542.74809160305347" y="783.80281690140851"/>
+            <point key="canvasLocation" x="1770" y="783"/>
         </scene>
         <!--Memory View Controller-->
         <scene sceneID="nQJ-S5-vG4">
@@ -233,7 +234,7 @@
                                             <constraint firstAttribute="width" constant="131" id="EXV-UW-d0s"/>
                                             <constraint firstAttribute="height" constant="35" id="jzu-KB-mbu"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="35"/>
+                                        <fontDescription key="fontDescription" name="Inter-Regular_Bold" family="Inter" pointSize="35"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -257,7 +258,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="107" id="n6c-xw-MBb"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="35"/>
+                                        <fontDescription key="fontDescription" name="Inter-Regular_Bold" family="Inter" pointSize="35"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -315,13 +316,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="緑地" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Jm-mb-faZ">
-                                <rect key="frame" x="20" y="498" width="362" height="39.5"/>
-                                <fontDescription key="fontDescription" name="NotoSansJP-Thin_Bold" family="Noto Sans JP Thin" pointSize="27"/>
+                                <rect key="frame" x="20" y="498" width="362" height="43.5"/>
+                                <fontDescription key="fontDescription" name="NotoSansJP-Thin_Bold" family="Noto Sans JP Thin" pointSize="30"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2/3/4/" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6o-v9-8Xi">
-                                <rect key="frame" x="20" y="538.5" width="362" height="32"/>
+                                <rect key="frame" x="20" y="542.5" width="362" height="32"/>
                                 <fontDescription key="fontDescription" name="NotoSansJP-Thin_ExtraBold" family="Noto Sans JP Thin" pointSize="22"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -373,7 +374,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w5N-bh-FPH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1435.5140186915887" y="783.36933045356375"/>
+            <point key="canvasLocation" x="2925" y="783"/>
         </scene>
         <!--MAP-->
         <scene sceneID="TgC-P2-w9b">
@@ -432,7 +433,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tGY-Qu-YyB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-382" y="784"/>
+            <point key="canvasLocation" x="739" y="783"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Xvx-iF-jqZ">

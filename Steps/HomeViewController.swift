@@ -44,12 +44,11 @@ class HomeViewController: UIViewController{
                 return
             }
         }
-        
         containerView.layer.cornerRadius = 20
         containerView.clipsToBounds = true
         chartContainerView.layer.cornerRadius = 20
         chartContainerView.clipsToBounds = true
-    
+        
     }
     
     func getSteps(){
@@ -187,84 +186,44 @@ class HomeViewController: UIViewController{
                 print(stepArray)
                 print(distanceArray)
                 updateStepRealm(dateArray: self.dateArray, stepArray: self.stepArray, distanceArray: self.distanceArray)
+                
                 displayChart(xArray: graphDateArray, yArray: stepArray)
+                
             }
         }
         HKHealthStore().execute(query)
-        
-//        let sevenDaysAgo = Calendar.current.date(byAdding: DateComponents(day: -0), to: Date())!
-//        let startDate = Calendar.current.startOfDay(for: sevenDaysAgo)
-//
-//        let predicate = HKQuery.predicateForSamples(withStart: startDate,
-//                                                    end: Date(),
-//                                                    options: [])
-//
-//        let query = HKStatisticsCollectionQuery(
-//            quantityType: HKObjectType.quantityType(forIdentifier: .distanceWalkingRunning)!,
-//            quantitySamplePredicate: predicate,
-//            options: .cumulativeSum,
-//            anchorDate: startDate,
-//            intervalComponents: DateComponents(day: 1))
-//
-//        query.initialResultsHandler = { _, results, _ in guard let statsCollection = results else { return }
-//            /// クエリ結果から期間（開始日・終了日）を指定して歩数の統計情報を取り出す。
-//            statsCollection.enumerateStatistics(from: startDate, to: Date()) { statistics, _ in
-//                /// `statistics` に最小単位（今回は１日分の歩数）のサンプルデータが返ってくる。
-//                /// `statistics.sumQuantity()` でサンプルデータの合計（１日の合計歩数）を取得する。
-//                if let quantity = statistics.sumQuantity() {
-//
-//                    let distanceValue = quantity.doubleValue(for: HKUnit.meter())
-//                    let kiloDistance = distanceValue/1000
-//                    let distanceFloor = floor(kiloDistance*100)/100
-//                    self.distanceArray.append(Float(distanceFloor))
-//
-//                    DispatchQueue.main.async {
-//                        self.distanceLabel.text = "\(self.distanceArray[0])"
-//                    }
-//                    print("distance", self.distanceArray)
-//                } else {
-//                    // No Data
-//                    self.distanceArray.append(0)
-//                    DispatchQueue.main.async {
-//                        self.distanceLabel.text = "\(self.distanceArray[0])"
-//                    }
-//
-//                    print("distance", self.distanceArray)
-//
-//                }
-//            }
-//        }
-//        HKHealthStore().execute(query)
     }
     
-    func updateStepRealm(dateArray: Array<Any>, stepArray: Array<Any>, distanceArray: Array<Any>){
-        let lastDate = dateArray.last
-        let lastStep = stepArray.last
-        let lastDistance = distanceArray.last
+    func updateStepRealm(dateArray: [String], stepArray: [Int], distanceArray: [Float]){
+        guard let lastDate = dateArray.last,
+              let lastStep = stepArray.last,
+              let lastDistance = distanceArray.last else {
+            return
+        }
         print(lastDate)
         let memory: Memory? = read()
         
         if memory != nil {
             print(memory)
-            if memory?.date == lastDate as? String{
+            if memory?.date == lastDate{
                 try! realm.write {
-                    memory!.steps_num = lastStep as! Int
-                    memory!.distance = lastDistance as! Float
+                    memory!.steps_num = lastStep
+                    memory!.distance = lastDistance
                 }
             } else {
                 let newMemory = Memory()
-                newMemory.date = lastDate as! String
-                newMemory.steps_num = lastStep as! Int
-                newMemory.distance = lastDistance as! Float
+                newMemory.date = lastDate
+                newMemory.steps_num = lastStep
+                newMemory.distance = lastDistance
                 try! realm.write {
                     realm.add(newMemory)
                 }
             }
         } else {
             let newMemory = Memory()
-            newMemory.date = lastDate as! String
-            newMemory.steps_num = lastStep as! Int
-            newMemory.distance = lastDistance as! Float
+            newMemory.date = lastDate
+            newMemory.steps_num = lastStep
+            newMemory.distance = lastDistance
             try! realm.write {
                 realm.add(newMemory)
             }

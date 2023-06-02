@@ -70,7 +70,7 @@ class MemoryViewController: UIViewController, UINavigationControllerDelegate, UI
         let gradient = CAGradientLayer()
         gradient.frame = photoImageView.bounds
         let startColor = UIColor.systemBackground.withAlphaComponent(0).cgColor
-        let endColor = UIColor.systemBackground.cgColor
+        let endColor = UIColor.systemBackground.withAlphaComponent(0.8).cgColor
         gradient.colors = [startColor, endColor]
         photoImageView.layer.insertSublayer(gradient, at: 0)
     }

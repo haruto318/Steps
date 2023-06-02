@@ -23,6 +23,8 @@
 		64FFC47B2A20FA3500DF2BE3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FFC47A2A20FA3500DF2BE3 /* MapViewController.swift */; };
 		64FFC48B2A2239AA00DF2BE3 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 64FFC48A2A2239AA00DF2BE3 /* Charts */; };
 		64FFC48E2A25CEDE00DF2BE3 /* NotoSansJP-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64FFC48D2A25CEDE00DF2BE3 /* NotoSansJP-VariableFont_wght.ttf */; };
+		64FFC4902A27899800DF2BE3 /* Inter-VariableFont_slnt,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64FFC48F2A27899800DF2BE3 /* Inter-VariableFont_slnt,wght.ttf */; };
+		64FFC4952A281DB100DF2BE3 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 64FFC4942A281DB100DF2BE3 /* FSCalendar */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,7 @@
 		64FFC4402A1E619F00DF2BE3 /* MemoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryViewController.swift; sourceTree = "<group>"; };
 		64FFC47A2A20FA3500DF2BE3 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		64FFC48D2A25CEDE00DF2BE3 /* NotoSansJP-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansJP-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		64FFC48F2A27899800DF2BE3 /* Inter-VariableFont_slnt,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-VariableFont_slnt,wght.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64982ECE2A1E132A00223799 /* RealmSwift in Frameworks */,
+				64FFC4952A281DB100DF2BE3 /* FSCalendar in Frameworks */,
 				64FFC48B2A2239AA00DF2BE3 /* Charts in Frameworks */,
 				64982ECC2A1E132A00223799 /* Realm in Frameworks */,
 			);
@@ -99,6 +103,7 @@
 		64FFC48C2A25CEB600DF2BE3 /* font */ = {
 			isa = PBXGroup;
 			children = (
+				64FFC48F2A27899800DF2BE3 /* Inter-VariableFont_slnt,wght.ttf */,
 				64FFC48D2A25CEDE00DF2BE3 /* NotoSansJP-VariableFont_wght.ttf */,
 			);
 			path = font;
@@ -124,6 +129,7 @@
 				64982ECB2A1E132A00223799 /* Realm */,
 				64982ECD2A1E132A00223799 /* RealmSwift */,
 				64FFC48A2A2239AA00DF2BE3 /* Charts */,
+				64FFC4942A281DB100DF2BE3 /* FSCalendar */,
 			);
 			productName = Steps;
 			productReference = 64982E9B2A18B09000223799 /* Steps.app */;
@@ -156,6 +162,7 @@
 			packageReferences = (
 				64982ECA2A1E132A00223799 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				64FFC4892A2239AA00DF2BE3 /* XCRemoteSwiftPackageReference "Charts" */,
+				64FFC4932A281DB000DF2BE3 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 			);
 			productRefGroup = 64982E9C2A18B09000223799 /* Products */;
 			projectDirPath = "";
@@ -175,6 +182,7 @@
 				64FFC48E2A25CEDE00DF2BE3 /* NotoSansJP-VariableFont_wght.ttf in Resources */,
 				64982EAB2A18B09200223799 /* LaunchScreen.storyboard in Resources */,
 				64982EA82A18B09200223799 /* Assets.xcassets in Resources */,
+				64FFC4902A27899800DF2BE3 /* Inter-VariableFont_slnt,wght.ttf in Resources */,
 				64982EA62A18B09000223799 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,6 +451,14 @@
 				minimumVersion = 4.1.0;
 			};
 		};
+		64FFC4932A281DB000DF2BE3 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -460,6 +476,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 64FFC4892A2239AA00DF2BE3 /* XCRemoteSwiftPackageReference "Charts" */;
 			productName = Charts;
+		};
+		64FFC4942A281DB100DF2BE3 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64FFC4932A281DB000DF2BE3 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

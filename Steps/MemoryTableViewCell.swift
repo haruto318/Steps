@@ -31,14 +31,6 @@ class MemoryTableViewCell: UITableViewCell {
         photoImageView.layer.cornerRadius = 10
         photoImageView.clipsToBounds = true
         
-//        let url = URL(string: photoUrl)
-//        do {
-//            let data = try Data(contentsOf: url!)
-//            let image = UIImage(data: data)
-//            photo.image = image
-//        } catch let err {
-//            print("Error: \(err.localizedDescription)")
-//        }
     }
     
 }
