@@ -54,7 +54,7 @@ class MemoryViewController: UIViewController, UINavigationControllerDelegate, UI
         photoImageView.image = UIImage(data: selectedMemory.photo)
         photoImageView.layer.cornerRadius = 20
         photoImageView.clipsToBounds = true
-        imageGradient()
+//        imageGradient()
         
         containerView.layer.cornerRadius = 20
         containerView.clipsToBounds = true
@@ -65,6 +65,11 @@ class MemoryViewController: UIViewController, UINavigationControllerDelegate, UI
         locationManager.requestAlwaysAuthorization()
         
     }
+    
+    override func viewDidLayoutSubviews() {
+        imageGradient()
+    }
+
     
     func imageGradient(){
         let gradient = CAGradientLayer()
