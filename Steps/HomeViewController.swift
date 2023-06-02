@@ -39,7 +39,6 @@ class HomeViewController: UIViewController{
         HKHealthStore().requestAuthorization(toShare: nil, read: readDataTypes) { success, _ in
             if success {
                 self.getSteps()
-                self.getDistance()
             } else {
                 return
             }
@@ -117,6 +116,8 @@ class HomeViewController: UIViewController{
                 print(stepArray)
                 print(distanceArray)
             }
+            self.getDistance()
+            
         }
         HKHealthStore().execute(query)
     }
@@ -180,15 +181,16 @@ class HomeViewController: UIViewController{
                     let distanceFloor = floor(kiloDistance*100)/100
                     self.distanceArray.append(Float(distanceFloor))
                     
-                                        print("\(dateFormatter.string(from: item.startDate)) - \(dateFormatter.string(from: item.endDate))\(item.sumQuantity()?.doubleValue(for: HKUnit.meter()) ?? 0.0)")
+                    print("\(dateFormatter.string(from: item.startDate)) - \(dateFormatter.string(from: item.endDate))\(item.sumQuantity()?.doubleValue(for: HKUnit.meter()) ?? 0.0)")
                 }
                 print(dateArray)
                 print(stepArray)
                 print(distanceArray)
-                updateStepRealm(dateArray: self.dateArray, stepArray: self.stepArray, distanceArray: self.distanceArray)
+                updateStepRealm(dateArray: dateArray, stepArray: stepArray, distanceArray: distanceArray)
                 
-                displayChart(xArray: graphDateArray, yArray: stepArray)
-                
+                DispatchQueue.main.async { [self] in
+                    displayChart(xArray: graphDateArray, yArray: stepArray)
+                }
             }
         }
         HKHealthStore().execute(query)
