@@ -168,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="585.49618320610682" y="21.126760563380284"/>
+            <point key="canvasLocation" x="719" y="-761"/>
         </scene>
         <!--思い出-->
         <scene sceneID="jd7-at-nbn">
@@ -210,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="653-Xi-jVJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1770" y="783"/>
+            <point key="canvasLocation" x="641" y="783"/>
         </scene>
         <!--Memory View Controller-->
         <scene sceneID="nQJ-S5-vG4">
@@ -377,7 +377,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w5N-bh-FPH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2925" y="783"/>
+            <point key="canvasLocation" x="1796" y="783"/>
         </scene>
         <!--MAP-->
         <scene sceneID="TgC-P2-w9b">
@@ -428,7 +428,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PJ7-nJ-V3T" customClass="FSCalendar">
-                                <rect key="frame" x="24" y="84" width="366" height="488"/>
+                                <rect key="frame" x="24" y="128" width="366" height="488"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="PJ7-nJ-V3T" secondAttribute="height" multiplier="3:4" id="Fcp-bo-LPE"/>
@@ -443,14 +443,15 @@
                             <constraint firstItem="PJ7-nJ-V3T" firstAttribute="leading" secondItem="nfe-E7-h4y" secondAttribute="leading" constant="24" id="oiu-MB-xgb"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="カレンダー" image="calendar" catalog="system" id="vpt-hG-sej"/>
+                    <navigationItem key="navigationItem" title="カレンダー" id="Oro-DD-5DM"/>
                     <connections>
                         <outlet property="calendar" destination="PJ7-nJ-V3T" id="51a-U0-SoV"/>
+                        <segue destination="YEu-C6-ug1" kind="show" identifier="visitMemoryView" id="ie3-1z-y4N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="87v-gG-vZv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-368.11594202898556" y="782.8125"/>
+            <point key="canvasLocation" x="1796" y="21"/>
         </scene>
         <!--思い出-->
         <scene sceneID="JeB-Lx-XKh">
@@ -469,7 +470,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tGY-Qu-YyB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="739" y="783"/>
+            <point key="canvasLocation" x="-383" y="783"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Xvx-iF-jqZ">
@@ -484,7 +485,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="tIZ-4U-PsF"/>
                         <segue destination="Ndq-4H-kbK" kind="relationship" relationship="viewControllers" id="E4f-6i-5rN"/>
-                        <segue destination="Rsc-wi-lbz" kind="relationship" relationship="viewControllers" id="19Y-0l-HsG"/>
+                        <segue destination="Qha-s7-XVS" kind="relationship" relationship="viewControllers" id="19Y-0l-HsG"/>
                         <segue destination="faS-rS-1CZ" kind="relationship" relationship="viewControllers" id="tV3-oN-9e1"/>
                     </connections>
                 </tabBarController>
@@ -492,7 +493,29 @@
             </objects>
             <point key="canvasLocation" x="-382.44274809160305" y="21.83098591549296"/>
         </scene>
+        <!--カレンダー-->
+        <scene sceneID="Q4d-OS-OUD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qha-s7-XVS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="カレンダー" image="calendar" catalog="system" id="vpt-hG-sej"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6fF-cq-lUM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Rsc-wi-lbz" kind="relationship" relationship="rootViewController" id="kQV-Vl-1Lu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hzT-qr-VNV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="860.86956521739137" y="20.758928571428569"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ie3-1z-y4N"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="house" catalog="system" width="128" height="104"/>
