@@ -206,7 +206,6 @@ class HomeViewController: UIViewController{
         let memory: Memory? = read()
         
         if memory != nil {
-            print(memory)
             if memory?.date == lastDate{
                 try! realm.write {
                     memory!.steps_num = lastStep

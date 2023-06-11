@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64360D872A335FB7000540B8 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64360D862A335FB7000540B8 /* CalendarViewController.swift */; };
 		64982E9F2A18B09000223799 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64982E9E2A18B09000223799 /* AppDelegate.swift */; };
 		64982EA12A18B09000223799 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64982EA02A18B09000223799 /* SceneDelegate.swift */; };
 		64982EA62A18B09000223799 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64982EA42A18B09000223799 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		64360D862A335FB7000540B8 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		64982E9B2A18B09000223799 /* Steps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Steps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64982E9E2A18B09000223799 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64982EA02A18B09000223799 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				64FFC43D2A1E41F400DF2BE3 /* MemoryTableViewCell.xib */,
 				64FFC4402A1E619F00DF2BE3 /* MemoryViewController.swift */,
 				64FFC47A2A20FA3500DF2BE3 /* MapViewController.swift */,
+				64360D862A335FB7000540B8 /* CalendarViewController.swift */,
 			);
 			path = Steps;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				64982EA12A18B09000223799 /* SceneDelegate.swift in Sources */,
 				64982EB32A18B5EA00223799 /* HomeViewController.swift in Sources */,
 				64982EC22A1CE88F00223799 /* TableViewController.swift in Sources */,
+				64360D872A335FB7000540B8 /* CalendarViewController.swift in Sources */,
 				64FFC43E2A1E41F400DF2BE3 /* MemoryTableViewCell.swift in Sources */,
 				64FFC47B2A20FA3500DF2BE3 /* MapViewController.swift in Sources */,
 			);
@@ -348,31 +352,35 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Steps/Steps.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MQ38WHYXCG;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = QC8NW9PFKL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Steps/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "アプリ内で写真を撮るためにカメラを起動する";
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "アプリが臨床記録の読み取り許可";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "読み込み許可を求めるメッセージ";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "書き込み許可を求めるメッセージ";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "位置情報の取得許可";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "位置情報の取得許可";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Stepsは写真撮影時の場所を表示するため位置情報を利用します";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Stepsは写真撮影時の場所を表示するため位置情報を利用します";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.hamano.kemari.Steps;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = app.hamano.kemari.Steps0318;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -383,31 +391,35 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Steps/Steps.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MQ38WHYXCG;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = QC8NW9PFKL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Steps/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "アプリ内で写真を撮るためにカメラを起動する";
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "アプリが臨床記録の読み取り許可";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "読み込み許可を求めるメッセージ";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "書き込み許可を求めるメッセージ";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "位置情報の取得許可";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "位置情報の取得許可";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Stepsは写真撮影時の場所を表示するため位置情報を利用します";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Stepsは写真撮影時の場所を表示するため位置情報を利用します";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.hamano.kemari.Steps;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = app.hamano.kemari.Steps0318;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

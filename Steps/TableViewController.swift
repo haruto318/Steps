@@ -25,6 +25,10 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         memories = readMemories()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return memories.count
     }
