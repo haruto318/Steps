@@ -17,19 +17,20 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wGc-fw-80K">
-                        <rect key="frame" x="5.6666666666666679" y="3" width="38.666666666666657" height="44"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="wGc-fw-80K" secondAttribute="height" multiplier="3.5:4" id="Gbq-aZ-6bb"/>
-                        </constraints>
+                        <rect key="frame" x="5" y="3" width="40" height="44"/>
                     </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="wGc-fw-80K" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="0XG-KU-sLh"/>
                 <constraint firstItem="wGc-fw-80K" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="3" id="0fO-77-2HW"/>
-                <constraint firstItem="wGc-fw-80K" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="iEm-25-WIT"/>
+                <constraint firstAttribute="trailing" secondItem="wGc-fw-80K" secondAttribute="trailing" constant="5" id="15A-uD-MHI"/>
+                <constraint firstItem="wGc-fw-80K" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="nzi-i6-ESj"/>
+                <constraint firstAttribute="bottom" secondItem="wGc-fw-80K" secondAttribute="bottom" constant="3" id="rzT-J0-hiz"/>
             </constraints>
+            <connections>
+                <outlet property="photoImageView" destination="wGc-fw-80K" id="05O-Fw-bfg"/>
+            </connections>
             <point key="canvasLocation" x="39.694656488549619" y="19.718309859154932"/>
         </collectionViewCell>
     </objects>
