@@ -24,5 +24,9 @@ class FSCalendarCustomCell: FSCalendarCell {
         photoImageView.layer.cornerRadius = 10
         photoImageView.clipsToBounds = true
     }
+    
+    func falseCell(){
+        photoImageView.image = nil
+    }
 
 }
