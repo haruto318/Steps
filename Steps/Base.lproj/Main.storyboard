@@ -19,7 +19,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--HOME-->
+        <!--ホーム-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Steps" customModuleProvider="target" sceneMemberID="viewController">
@@ -45,7 +45,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o34-Fs-YT1">
-                                <rect key="frame" x="127" y="64" width="160" height="66.666666666666657"/>
+                                <rect key="frame" x="127" y="64" width="160" height="66.666666666666686"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular_Black" family="Inter" pointSize="55"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -157,7 +157,7 @@
                             <constraint firstItem="lmU-tC-kl4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="iJj-As-n3N"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="HOME" image="house" catalog="system" id="5Qa-bb-yge"/>
+                    <tabBarItem key="tabBarItem" title="ホーム" image="house" catalog="system" id="5Qa-bb-yge"/>
                     <connections>
                         <outlet property="chartContainerView" destination="eVC-6f-lE4" id="zr8-Sh-TV8"/>
                         <outlet property="containerView" destination="lmU-tC-kl4" id="6of-P8-nzF"/>
@@ -168,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="719" y="-761"/>
+            <point key="canvasLocation" x="-600" y="-385"/>
         </scene>
         <!--思い出-->
         <scene sceneID="jd7-at-nbn">
@@ -210,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="653-Xi-jVJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="641" y="783"/>
+            <point key="canvasLocation" x="-600" y="1050"/>
         </scene>
         <!--Memory View Controller-->
         <scene sceneID="nQJ-S5-vG4">
@@ -377,9 +377,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w5N-bh-FPH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1796" y="783"/>
+            <point key="canvasLocation" x="396" y="1050"/>
         </scene>
-        <!--MAP-->
+        <!--地図-->
         <scene sceneID="TgC-P2-w9b">
             <objects>
                 <viewController id="Ndq-4H-kbK" customClass="MapViewController" customModule="Steps" customModuleProvider="target" sceneMemberID="viewController">
@@ -405,7 +405,7 @@
                             <constraint firstItem="ztH-T9-fhK" firstAttribute="centerX" secondItem="g2i-GX-3Hc" secondAttribute="centerX" id="dJO-Ky-CZO"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="MAP" image="map" catalog="system" id="3lF-YV-8tJ"/>
+                    <tabBarItem key="tabBarItem" title="地図" image="map" catalog="system" id="3lF-YV-8tJ"/>
                     <connections>
                         <outlet property="mapView" destination="ztH-T9-fhK" id="f1k-2g-mF7"/>
                     </connections>
@@ -417,7 +417,7 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1487.4418604651162" y="783.47639484978549"/>
+            <point key="canvasLocation" x="-2506" y="1050"/>
         </scene>
         <!--カレンダー-->
         <scene sceneID="BxM-2T-0am">
@@ -479,7 +479,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="87v-gG-vZv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1796" y="21"/>
+            <point key="canvasLocation" x="396" y="347"/>
         </scene>
         <!--思い出-->
         <scene sceneID="JeB-Lx-XKh">
@@ -498,7 +498,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tGY-Qu-YyB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-383" y="783"/>
+            <point key="canvasLocation" x="-1488" y="1050"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Xvx-iF-jqZ">
@@ -519,7 +519,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UDy-f5-jpl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-382.44274809160305" y="21.83098591549296"/>
+            <point key="canvasLocation" x="-1488" y="-94"/>
         </scene>
         <!--カレンダー-->
         <scene sceneID="Q4d-OS-OUD">
@@ -538,7 +538,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzT-qr-VNV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="860.86956521739137" y="20.758928571428569"/>
+            <point key="canvasLocation" x="-600" y="347"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

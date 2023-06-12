@@ -14,9 +14,6 @@ class FSCalendarCustomCell: FSCalendarCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-//        self.layer.borderWidth = 1.0
-//        self.layer.borderColor = UIColor.lightGray.cgColor
     }
     
     func setCell(photoUrl: Data){

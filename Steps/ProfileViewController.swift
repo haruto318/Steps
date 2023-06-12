@@ -2,36 +2,23 @@
 //  ProfileViewController.swift
 //  Steps
 //
-//  Created by Haruto Hamano on 2023/06/01.
+//  Created by Haruto Hamano on 2023/06/13.
 //
 
 import UIKit
 import FSCalendar
-import RealmSwift
 
-class ProfileViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource{
+class ProfileViewController: UIViewController {
     
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var profilePhoto: UIImageView!
     @IBOutlet weak var calendar: FSCalendar!
-    
-    let realm = try! Realm()
-    var memories: [Memory] = []
-    var selectedMemory: Memory? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
-            calendar.dataSource = self
-            calendar.delegate = self
-            view.addSubview(calendar)
 
         // Do any additional setup after loading the view.
-    }
-    
-    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-
-    }
-    
-    func readMemories() -> [Memory]{
-        return Array(realm.objects(Memory.self))
     }
     
 
