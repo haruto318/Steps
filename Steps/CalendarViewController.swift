@@ -16,19 +16,38 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     var memories: [Memory] = []
     var selectedMemory: Memory? = nil
     var datesWithEvents: Set<String> = []
-    var stepsWithEvents: Set<Int> = []
+    var stepsWithEvents: Dictionary<String, Int> = [:]
     
     var eventModels: [[String:Any]] = []
     @IBOutlet weak var calendar: FSCalendar!
+    
+//    var onliDayDateFormatter:DateFormatter{
+//            let dateFormatter = DateFormatter()
+//            dateFormatter.dateFormat = "d日"
+//            return dateFormatter
+//        }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.calendar.dataSource = self
         self.calendar.delegate = self
+//        calendar.collectionView.register(UINib(nibName: "FSCalendarCustomCell", bundle: nil),forCellWithReuseIdentifier: "FSCalendarCustomCell")
+        self.calendar.calendarWeekdayView.weekdayLabels[0].text = "日"
+        self.calendar.calendarWeekdayView.weekdayLabels[1].text = "月"
+        self.calendar.calendarWeekdayView.weekdayLabels[2].text = "火"
+        self.calendar.calendarWeekdayView.weekdayLabels[3].text = "水"
+        self.calendar.calendarWeekdayView.weekdayLabels[4].text = "木"
+        self.calendar.calendarWeekdayView.weekdayLabels[5].text = "金"
+        self.calendar.calendarWeekdayView.weekdayLabels[6].text = "土"
         
         memories = readMemories()
         
+        
+    }
+    
+    func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, subtitleOffsetFor date: Date) -> CGPoint {
+        CGPoint(x: 0, y: 5)
     }
     
     
@@ -43,36 +62,8 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         }
     }
     
-    func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int{
-
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy/MM/dd"
-        formatter.calendar = Calendar(identifier: .gregorian)
-        formatter.timeZone = TimeZone.current
-        formatter.locale = Locale.current
-        let calendarDay = formatter.string(from: date)
-
-        // Realmオブジェクトの生成
-        let realm = try! Realm()
-        // 参照（全データを取得）
-        let memories = realm.objects(Memory.self)
-
-        if memories.count > 0 {
-            for i in 0..<memories.count {
-                if i == 0 {
-                    datesWithEvents = [memories[i].date]
-                } else {
-                    datesWithEvents.insert(memories[i].date)
-                }
-            }
-        } else {
-            datesWithEvents = []
-        }
-        print(datesWithEvents)
-        return datesWithEvents.contains(calendarDay) ? 1 : 0
-    }
-    
-//    func calendar(_ calendar: FSCalendar, titleFor date: Date) -> String? {
+//    func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int{
+//
 //        let formatter = DateFormatter()
 //        formatter.dateFormat = "yyyy/MM/dd"
 //        formatter.calendar = Calendar(identifier: .gregorian)
@@ -88,18 +79,99 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
 //        if memories.count > 0 {
 //            for i in 0..<memories.count {
 //                if i == 0 {
-//                    stepsWithEvents = [memories[i].steps_num]
+//                    datesWithEvents = [memories[i].date]
 //                } else {
-//                    stepsWithEvents.insert(memories[i].steps_num)
+//                    datesWithEvents.insert(memories[i].date)
 //                }
 //            }
 //        } else {
-//            stepsWithEvents = []
+//            datesWithEvents = []
 //        }
-//        print(stepsWithEvents)
-//        return "\(stepsWithEvents)"
+//        print(datesWithEvents)
+//        return datesWithEvents.contains(calendarDay) ? 1 : 0
 //    }
     
+    func calendar(_ calendar: FSCalendar, subtitleFor date: Date) -> String? {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd"
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.timeZone = TimeZone.current
+        formatter.locale = Locale.current
+        let calendarDay = formatter.string(from: date)
+        
+        var step: String = ""
+
+        // Realmオブジェクトの生成
+        let realm = try! Realm()
+        // 参照（全データを取得）
+        let memories = realm.objects(Memory.self)
+
+        if memories.count > 0 {
+            for i in 0..<memories.count {
+                if i == 0 {
+                    stepsWithEvents = [memories[i].date: memories[i].steps_num]
+                    print(memories[i].steps_num)
+                } else {
+                    stepsWithEvents.updateValue(memories[i].steps_num, forKey: memories[i].date)
+                    print(memories[i].steps_num)
+                }
+            }
+        } else {
+            stepsWithEvents = [:]
+        }
+        print(stepsWithEvents)
+        print(type(of: calendarDay))
+        if stepsWithEvents.keys.contains(calendarDay){
+            step = String(stepsWithEvents[calendarDay]!)
+            print(step)
+            return step
+        } else {
+            print("what???")
+        }
+        
+        return ""
+    }
+//
+//    func calendar(_ calendar: FSCalendar,  date: Date) -> String? {
+//        let formatter = DateFormatter()
+//        formatter.dateFormat = "yyyy/MM/dd"
+//        formatter.calendar = Calendar(identifier: .gregorian)
+//        formatter.timeZone = TimeZone.current
+//        formatter.locale = Locale.current
+//        let calendarDay = formatter.string(from: date)
+//
+//        var step: String = ""
+//
+//        // Realmオブジェクトの生成
+//        let realm = try! Realm()
+//        // 参照（全データを取得）
+//        let memories = realm.objects(Memory.self)
+//
+//        if memories.count > 0 {
+//            for i in 0..<memories.count {
+//                if i == 0 {
+//                    stepsWithEvents = [memories[i].date: memories[i].steps_num]
+//                } else {
+//                    stepsWithEvents.updateValue(memories[i].steps_num, forKey: memories[i].date)
+//                }
+//            }
+//        } else {
+//            stepsWithEvents = [:]
+//        }
+//        print(stepsWithEvents)
+//        if stepsWithEvents.keys.contains(calendarDay){
+//            step = String(describing: stepsWithEvents[calendarDay])
+//        }
+//
+//        return step
+//    }
+    
+//    func calendar(_ calendar: FSCalendar, cellFor date: Date, at position: FSCalendarMonthPosition) -> FSCalendarCell {
+//            let cell = calendar.dequeueReusableCell(withIdentifier: "FSCalendarCustomCell", for: date, at: position) as! FSCalendarCustomCell
+//            cell.dayLabel.text = onliDayDateFormatter.string(from: date)
+//            return cell
+//        }
+//
     func readMemories() -> [Memory]{
         return Array(realm.objects(Memory.self))
     }
@@ -110,6 +182,6 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
             MemoryViewController.selectedMemory = self.selectedMemory!
         }
     }
+    
 }
-
 
